@@ -1,0 +1,36 @@
+.card:hover {
+  /* box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color); */
+}
+.card{
+  transition: transform 0.3s ease-out;
+}
+.overlay{
+  width: 20px;
+  position: absolute; 
+  height: 20px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 0;
+  opacity: 0;
+  transition: transform 0.7s ease-out;
+}
+.card:hover .overlay{
+  opacity: 1;
+  transform: scale(15);
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+
+.content-container::-webkit-scrollbar {
+  display: none;
+}
+
+.content-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

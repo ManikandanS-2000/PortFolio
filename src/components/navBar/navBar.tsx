@@ -13,7 +13,6 @@ export default function NavBar() {
         {label : "GitHub", link : "",icon:"svg/github.svg",type : "site-link"},
         {label : "Resume", link : "",icon:"svg/file-download.svg",type : "site-link"},
         {label : "Contact", link : "",icon:"svg/contact.svg",type : "site-link"},
-
     ]
 
     return (

@@ -3,6 +3,7 @@ import "./content.css"
 
 export default function Content() {
 
+
     let skills = [
         { label: "Python", icon: "svg/python.svg", color: "rgba(35, 113, 178, 0.53) 24%, rgba(254, 212, 53, 0.4) 78%" },
         { label: "HTML", icon: "svg/html.svg", color: "rgba(228, 77, 38, 0.53) 24%, rgba(241, 101, 41, 0.4) 78%" },
@@ -68,12 +69,23 @@ export default function Content() {
         }
     ]
 
-    let acedamics = [
-        
+    let academics = [
+        {
+            instituteName : "Chettinad College of Engineering & Technology",
+            date : "Apr 2018 - Mar 2022",
+            course: "Bachelor of Engineering CSE",
+            address : "Karur, Tamil Nadu"
+        },
+        {
+            instituteName : "P.A.VIDHYABHAVAN HR.SEC.SCHOOL",
+            date : "Apr 2016 - Mar 2018",
+            course: "HSC - Science",
+            address : "Karur, Tamil Nadu"
+        }
     ]
     return (
         <div className="content-container w-full h-[90%] bg-[rgba(16,18,27,0.6)] rounded-xl p-4 overflow-auto">
-            <div className="about-content h-[50%] flex gap-5 bg-[#4bc47324] rounded-xl p-6">
+            <div className="about-container h-[50%] flex gap-5 bg-[#4bc47324] rounded-xl p-6" id="about-container">
                 <div className="w-[70%]"><p className="text-5xl mb-5">Manikandan S</p><p className="leading-7">Full Stack Developer with 2.5 years of experience in building responsive sites  using
                     Angular, Vue, and React. Passionate about merging user-centric design with cutting-edge technology to solve complex problems.
                     Proven ability to lead cross-functional teams, mentor junior developers, and deliver scalable solutions aligned with Agile workflows.</p></div>
@@ -81,58 +93,66 @@ export default function Content() {
                     <Image className="m-auto rounded-xl object-cover" src="/image/profile-pic.png" alt="My Profile Pic" fill />
                 </div>
             </div>
-            <div className="h-[max-content] p-6">
+            <div className="skill-container h-[max-content] p-6" id="skill-container">
                 <p className="text-2xl">Skills</p>
                 <div className="flex flex-wrap px-10 py-5 items-center justify-center">
                     {
-                        skills.map((skill, index) => {
-                            return (
-                                <div className="mx-8 mb-8 w-[100px] h-[100px] flex flex-col justify-center 
-                                items-center rounded-xl bg-[#4bc47324] relative overflow-hidden card education" key={`skill-item-${index}`}>
-                                    <div className="overlay" style={{ background: `linear-gradient(163deg,${skill.color})` }} key={`overlay-design-${index}`}></div>
-                                    <Image className="object-cover z-1" src={skill.icon} alt={skill.label} width={55} height={55} />
-                                    <p className="text-[12px] pt-1.5 z-1">{skill.label}</p>
-                                </div>
-                            )
-                        })
+                        skills.map((skill, index) => 
+                            <div className="mx-8 mb-8 w-[100px] h-[100px] flex flex-col justify-center 
+                            items-center rounded-xl bg-[#4bc47324] relative overflow-hidden card education" key={`skill-item-${index}`}>
+                                <div className="overlay" style={{ background: `linear-gradient(163deg,${skill.color})` }} key={`overlay-design-${index}`}></div>
+                                <Image className="object-cover" src={skill.icon} alt={skill.label} width={55} height={55} />
+                                <p className="text-[12px] pt-1.5">{skill.label}</p>
+                            </div>
+                        )
                     }
                 </div>
             </div>
-            <div className="h-max p-6 job-container">
+            <div className="job-container h-max p-6" id="job-container">
                 <p className="text-2xl">Jobs</p>
                 <div className="px-10 py-5 flex flex-wrap justify-center gap-10">
                     {
-                        jobs.map((job,index) => {
-                            return (
-                                <div className="job-card p-5 w-[48%] bg-[#4bc47324] rounded-xl" key={`job-card-${index}`}>
-                                    <div className="flex justify-between items-baseline"><p className="mb-5 text-2xl">{job.compName}</p><p className="text-[#b6b6b6] text-[14px] italic">{job.date}</p></div>
-                                    <ul>
-                                        {
-                                            job.content.map((sentence,index) => <li className="text-[14px]  leading-5 mb-5" key={`job-sentence-${index}`}>&ndash; &nbsp;&nbsp;&nbsp;{sentence}</li>)
-                                        }
-                                    </ul>
-                                </div>
-                            )
-                        })
+                        jobs.map((job,index) => 
+                            <div className="job-card p-5 w-[48%] bg-[#4bc47324] rounded-xl" key={`job-card-${index}`}>
+                                <div className="flex justify-between items-baseline"><p className="mb-5 text-2xl">{job.compName}</p><p className="text-xs text-[#b6b6b6] italic">{job.date}</p></div>
+                                <ul>
+                                    {
+                                        job.content.map((sentence,index) => <li className="text-[14px]  leading-5 mb-5" key={`job-sentence-${index}`}>&ndash; &nbsp;&nbsp;&nbsp;{sentence}</li>)
+                                    }
+                                </ul>
+                            </div>
+                        )
                     }
                 </div>
             </div>
-            <div className="h-max p-6 project-container">
+            <div className="project-container h-max p-6" id="project-container">
                 <p className="text-2xl">Projects</p>
                 <div className="px-10 py-5 w-full flex flex-wrap justify-center gap-10">
                     {
-                        projects.map((project,index) => {
-                            return (
-                                <div className="project-card p-5 w-[48%] bg-[#4bc47324] rounded-xl" key={`project-card-${index}`}>
-                                    <div className="flex justify-between items-baseline"><p className="mb-5 text-2xl">{project.projectName}</p></div>
-                                    <ul>
-                                        {
-                                            project.content.map((sentence,index) => <li className="text-[14px] leading-5 mb-5" key={`project-sentence-${index}`}>&ndash; &nbsp;&nbsp;&nbsp;{sentence}</li>)
-                                        }
-                                    </ul>
-                                </div>
-                            )
-                        })
+                        projects.map((project,index) => 
+                            <div className="project-card p-5 w-[48%] bg-[#4bc47324] rounded-xl" key={`project-card-${index}`}>
+                                <div className="flex justify-between items-baseline"><p className="mb-5 text-2xl">{project.projectName}</p></div>
+                                <ul>
+                                    {
+                                        project.content.map((sentence,index) => <li className="text-[14px] leading-5 mb-5" key={`academi-sentence-${index}`}>&ndash; &nbsp;&nbsp;&nbsp;{sentence}</li>)
+                                    }
+                                </ul>
+                            </div>
+                        )
+                    }
+                </div>
+            </div>
+            <div className="academics-container h-max p-6" id="academics-container">
+                <p className="text-2xl">Academics</p>
+                <div className="px-10 py-5 w-full flex flex-wrap justify-center gap-10">
+                    {
+
+                        academics.map((academi,index) => 
+                            <div className="academi-card p-5 w-[48%] bg-[#4bc47324] rounded-xl" key={`academi-card-${index}`}>
+                                <div className="flex justify-between items-baseline mb-5 text-2xl">{academi.course} <span className="text-xs text-[#b6b6b6] italic">{academi.date}</span></div>
+                                <div className="flex justify-between items-baseline text-1xl">{academi.instituteName}<span className="text-xs text-[#b6b6b6] italic">{academi.address}</span></div>
+                            </div>
+                        )
                     }
                 </div>
             </div>

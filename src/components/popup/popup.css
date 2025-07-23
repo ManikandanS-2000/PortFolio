@@ -1,0 +1,7 @@
+#message-input {
+    height: 100px;
+    max-height: 200px;
+    text-align: start !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

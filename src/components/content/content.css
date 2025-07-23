@@ -40,7 +40,7 @@
   scrollbar-width: none;
 }
 
-.job-card, .project-card {
+.about-container,.job-card, .project-card, .academi-card {
    transition: all 0.5s;
   /*transform-origin: 0% 0%;
   transform :perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg) scale(0.7);

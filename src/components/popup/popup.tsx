@@ -50,7 +50,7 @@ export default function Popup({ close }: any) {
                                         :
                                         <>
                                             <input name={field.name} type="text" className="w-2/3 bg-[rgba(16,18,27,0.6)] float-right p-1.5 outline-hidden rounded-sm" id={field.name + "-input"} defaultValue={field.value} disabled={field.disable} />
-                                            <Image src="svg/copy.svg" alt="Copy Icon" width={20} height={20} className={(field.disable) ? "right-[1%] top-1/2 translate-y-[-50%] translate-x-0 absolute " : "hidden"} onClick={() => myFunction(field.name + "-input")} />
+                                            <Image src="./svg/copy.svg" alt="Copy Icon" width={20} height={20} className={(field.disable) ? "right-[1%] top-1/2 translate-y-[-50%] translate-x-0 absolute " : "hidden"} onClick={() => myFunction(field.name + "-input")} />
                                         </>
                                 }
                             </label>

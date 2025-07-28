@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Funnel_Display } from "next/font/google";
 import "./globals.css";
-import SplashCursor , {ColorRGB} from '@/components/cursor/cursor';
 
 const font = Funnel_Display({
   variable: "--font-funal-display",

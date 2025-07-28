@@ -7,7 +7,7 @@ interface NotificationProps{
     content : NotificationContent
 }
 export default function Notification({view,content}:NotificationProps){
-    let imagePath = (content.status == "Error") ? "./svg/error.svg" : (content.status == "Success") ? "./svg/success.svg" : ""
+    const imagePath = (content.status == "Error") ? "./svg/error.svg" : (content.status == "Success") ? "./svg/success.svg" : ""
     let loadingElement = <></>
     if(content.status == "Loading"){
         loadingElement = <span className="loader"></span>

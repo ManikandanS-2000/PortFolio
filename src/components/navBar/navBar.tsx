@@ -7,7 +7,7 @@ import React from "react";
 
 export default function NavBar() {
     const popupHook = usePopup();
-    let navLinks = [
+    const navLinks = [
         {label : "About", link : "#about-container", type : "page"},
         {label : "Skill", link : "#skill-container", type : "page"},
         {label : "Jobs", link : "#job-container",type : "page"},

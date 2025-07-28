@@ -4,7 +4,7 @@ import "./content.css"
 export default function Content() {
 
 
-    let skills = [
+    const skills = [
         { label: "Python", icon: "./svg/python.svg", color: "rgba(35, 113, 178, 0.53) 24%, rgba(254, 212, 53, 0.4) 78%" },
         { label: "HTML", icon: "./svg/html.svg", color: "rgba(228, 77, 38, 0.53) 24%, rgba(241, 101, 41, 0.4) 78%" },
         { label: "CSS", icon: "./svg/css.svg", color: "rgba(17, 114, 184, 0.4) 24%, rgba(51, 170, 221, 0.4) 78%" },
@@ -24,7 +24,7 @@ export default function Content() {
 
 
 
-    let jobs = [
+    const jobs = [
         {
             compName: "V2etechnologies",
             date: "Feb 2023 - Oct 2025",
@@ -39,7 +39,7 @@ export default function Content() {
         }
     ]
 
-    let projects = [
+    const projects = [
         {
             projectName : "Google Drive Files Sync",
             content : [
@@ -69,7 +69,7 @@ export default function Content() {
         }
     ]
 
-    let academics = [
+    const academics = [
         {
             instituteName : "Chettinad College of Engineering & Technology",
             date : "Apr 2018 - Mar 2022",

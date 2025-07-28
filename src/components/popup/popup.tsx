@@ -1,13 +1,13 @@
 import Image from "next/image"
 import "./popup.css"
-import { Ref, useRef, useState } from "react";
+import { Ref, useRef } from "react";
 import useNotification from "@/hooks/useNotification";
 
 export default function Popup({ close }: any) {
     const submitBtn: Ref<HTMLButtonElement> | null = useRef(null);
     const mailSend = useNotification();
 
-    let formFields = [
+    const formFields = [
         { name: "mobileno", label: "Mobile No", value: "8072010345", disable: true },
         { name: "myemail", label: "My Email", value: "manikandan.s161220@gmail.com", disable: true },
         { name: "name", label: "Name", value: "", disable: false },
@@ -16,7 +16,7 @@ export default function Popup({ close }: any) {
     ]
 
     const myFunction = (elementId: string) => {
-        var copyText: any = document.getElementById(elementId);
+        const copyText: any = document.getElementById(elementId);
         copyText.select();
         copyText.setSelectionRange(0, 99999);
         navigator.clipboard.writeText(copyText.value);

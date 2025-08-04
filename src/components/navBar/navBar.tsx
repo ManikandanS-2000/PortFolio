@@ -9,9 +9,9 @@ export default function NavBar() {
     const popupHook = usePopup();
     const navLinks = [
         {label : "About", link : "#about-container", type : "page"},
-        {label : "Skill", link : "#skill-container", type : "page"},
-        {label : "Jobs", link : "#job-container",type : "page"},
-        {label : "Project", link : "#project-container",type : "page"},
+        {label : "Skills", link : "#skill-container", type : "page"},
+        {label : "Jobs", link : "#jobs-container",type : "page"},
+        {label : "Projects", link : "#projects-container",type : "page"},
         {label : "Academics", link : "#academics-container",type : "page"},
         {label : "LinkedIn", link : "https://www.linkedin.com/in/manikandan-s-523259194/",icon:"./svg/linkedIn.svg",type : "site-link"},
         {label : "GitHub", link : "https://github.com/ManikandanS-2000",icon:"./svg/github.svg",type : "site-link"},

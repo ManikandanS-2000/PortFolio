@@ -15,7 +15,7 @@ export default function NavBar() {
         {label : "Academics", link : "#academics-container",type : "page"},
         {label : "LinkedIn", link : "https://www.linkedin.com/in/manikandan-s-523259194/",icon:"./svg/linkedIn.svg",type : "site-link"},
         {label : "GitHub", link : "https://github.com/ManikandanS-2000",icon:"./svg/github.svg",type : "site-link"},
-        {label : "Resume", link : "./documents/Resume_Manikandan_S.pdf",icon:"./svg/file-download.svg",type : "site-link"},
+        {label : "Resume", link : "./documents/Resume-Manikandan_S.pdf",icon:"./svg/file-download.svg",type : "site-link"},
         {label : "Contact", link : "",icon:"./svg/contact.svg",type : "site-link"},
     ]
 

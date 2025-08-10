@@ -25,39 +25,37 @@ export default function Content() {
             header: "V2etechnologies",
             date: "Feb 2023 - Oct 2025",
             content: [
-                "Developed and maintained front-end web applications using HTML, CSS, JavaScript and ReactJS.",
-                "Created back-end services for data manipulation and business logic using Django with DRF (Django Rest Framework) and Flask.",
+                "Developed and maintained front-end web applications using React JS/Angular with Tailwind and Bootstrap.",
+                "Created back-end services for data manipulation and business logic using Django ORM, DRF and Flask.",
                 "Designed database schemas to store application data using MySql and Postgresql.",
-                "Built responsive websites compatible with mobile devices using Tailwind CSS.",
                 "Developed 10+ Python services to automate data processing tasks.",
-                "Developed 4+ Custom Modules in Odoo."
+                "Developed 5+ Custom Modules in Odoo."
             ]
         }],
         projects: [{
-            header: "Google Drive Files Sync",
-            content: [
-                "Built a Python-based service to sync files from Google Drive, including shared folders, preserving the original folder hierarchy locally that is in Google Drive.",
-                "Overcame a key limitation of the default Drive sync by directly accessing shared-with-me files via the Drive API.",
-                "Used a local timestamp to download only new files, saving time and system resources.",
-                "Maintained comprehensive logs that contains local paths, Drive paths, download timestamps, and sync history for traceability.",
-            ]
-        },
-        {
-            header: "Image Attribute Extraction Tool",
-            content: [
-                "Designed a Django-based image annotation tool with Riot.JS for users to define attribute fields and unique template identifiers.",
-                "Stored positional metadata (attribute and identifier coordinates) in a MySQL database to support dynamic template matching.",
-                "Integrated CLOVA OCR API to extract identifier text from uploaded images and automatically match them to the find correct template.",
-                "Cropped image regions based on stored coordinates and processed them through CLOVA OCR for precise field-level text extraction when the template matches with input image.",
-            ]
-        },
-        {
             header: "Report Maker",
             content: [
-                "Developed a web based report generation application for creation, formatting, and delivery of business reports.",
-                "Built the front-end interface using React.js with responsive pages, multiple essential report elements like text box and shapes and report preview for enhanced user experience.",
-                "Designed and implemented the backend using Django, with role- based authentication and optimized ORM structure for storing reports with MySQL Database.",
-                "Introduced report sharing feature via email and direct app link.",
+                "Developed a web application using React JS to create, edit, and share business reports.",
+                "Built with Bootstrap and Material UI for responsive design.",
+                "Developed back-end using Django with optimized ORM structure, JWT authentication and MySQL Database.",
+                "Users can create any number of reports and share them within the application and also via email and app link with read-only access.",
+            ]
+        },
+        {
+            header: "Weld & Deburr Evaluation",
+            content: [
+                "Developed a mobile app using Angular Ionic framework to capture weld and deburr images and evaluate them using OpenAI.",
+                "Developed a web application to display the results on a webpage using Angular with Tailwind CSS.",
+                "Wrote an API in C# .Net Core to retrieve and store the results in an SQL database and send them to a dashboard application.",
+            ]
+        },
+        {
+            header: "Attributes Extraction Tool",
+            content: [
+                "Developed a web application using Django with Riot.JS for template-based image OCR and used MySQL database for storing Template metadata.",
+                "Integrated the CLOVA OCR API to extract text from images.",
+                "Users can create any number of templates with specific regions they want to extract from images and upload new images to extract attributes.",
+                "Image OCR can be performed using an API by simply passing the image that makes it easy to integrate in other applications.",
             ]
         }],
         academics: [{
